@@ -1,3 +1,5 @@
+# Select-String -Path ".\user.csv" -Pattern "^293" | Select-Object Line | Export-Csv -path "./s5contacts.csv " -NoTypeInformation
+
 Select-String -Path "./users.csv" -Pattern "^293" | ForEach-Object {
     # Split the line 
     $Elements = $_.Line.Split(",", [System.StringSplitOptions]::RemoveEmptyEntries)
